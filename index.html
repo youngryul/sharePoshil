@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>포실이 허브 — 모든 다운로드</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <img src="assets/posil-icon.png" alt="포실이" class="logo-img" />
+        <span class="logo-text">포실이 허브</span>
+      </div>
+      <nav class="nav">
+        <a href="#apps">앱</a>
+        <a href="#web">웹사이트</a>
+        <a href="#contact">연락처</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#apps" onclick="closeNav()">앱</a>
+      <a href="#web" onclick="closeNav()">웹사이트</a>
+      <a href="#contact" onclick="closeNav()">연락처</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <!-- 배경 장식 -->
+    <div class="hero-deco">
+      <span class="deco-dot d1"></span>
+      <span class="deco-dot d2"></span>
+      <span class="deco-dot d3"></span>
+      <span class="deco-dot d4"></span>
+      <span class="deco-dot d5"></span>
+    </div>
+
+    <div class="hero-content">
+      <!-- 텍스트 -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">🥔 포실이가 직접 만든 것들</p>
+        <h1 class="hero-title">
+          다운로드,<br />
+          <span class="highlight">한 곳에서</span> 전부
+        </h1>
+        <p class="hero-desc">
+          포실이가 만든 앱과 웹사이트를<br class="br-mobile" />
+          한눈에 보고 바로 받아보세요.
+        </p>
+        <a href="#apps" class="btn-hero">둘러보기 →</a>
+      </div>
+
+      <!-- 포실이 캐릭터 -->
+      <div class="hero-char">
+        <div class="char-shadow"></div>
+        <img
+          src="assets/posil-water.gif"
+          alt="물 주는 포실이"
+          class="char-img"
+          draggable="false"
+        />
+      </div>
+    </div>
+
+    <!-- 웨이브 -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats" id="stats">
+    <div class="stats-inner">
+      <div class="stat-card">
+        <span class="stat-num" id="stat-apps">0</span>
+        <span class="stat-label">앱 프로젝트</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="stat-web">0</span>
+        <span class="stat-label">웹사이트</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="stat-users">0</span>
+        <span class="stat-label">총 다운로드</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPS ===== -->
+  <section class="section" id="apps">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">📱 앱</span>
+        <h2 class="section-title">앱 다운로드</h2>
+        <p class="section-sub">포실이가 직접 개발한 모바일 · 데스크탑 앱</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- ▼ 앱 카드 추가 예시 — 복사해서 사용하세요 -->
+        <article class="card reveal">
+          <div class="card-thumb" style="--grad: linear-gradient(135deg,#8b6914,#c8933b)">
+            <img src="assets/posil-icon.png" alt="앱 아이콘" class="card-thumb-img" />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">앱 이름</h3>
+              <span class="chip chip-soon">준비중</span>
+            </div>
+            <p class="card-desc">앱에 대한 짧은 소개를 여기에 적어주세요.</p>
+            <p class="card-version">출시 예정</p>
+          </div>
+          <div class="card-footer">
+            <span class="btn-dl btn-disabled">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+              </svg>
+              준비중
+            </span>
+          </div>
+        </article>
+
+        <article class="card card-empty reveal">
+          <img src="assets/posil.png" alt="포실이" class="empty-posil" />
+          <p class="empty-msg">곧 더 추가될 예정이에요!</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WEB ===== -->
+  <section class="section section-alt" id="web">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">🌐 웹</span>
+        <h2 class="section-title">웹사이트</h2>
+        <p class="section-sub">포실이가 만든 웹 서비스 모음</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- ▼ 웹 카드 예시 -->
+        <article class="card reveal">
+          <div class="card-thumb card-thumb-clear">
+            <img src="assets/posil-water.gif" alt="밀집모자 포실이" class="card-thumb-img card-thumb-img--lg" />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">Work — 하루 비서</h3>
+              <span class="chip chip-web">WEB</span>
+            </div>
+            <p class="card-desc">할 일부터 메모, 일정까지 — 하루 종일 곁에서 함께하는 나만의 업무 비서. 열어두기만 해도 하루가 정리돼요.</p>
+            <p class="card-version">서비스 중</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://work-sable-one.vercel.app/" class="btn-dl btn-visit" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+              </svg>
+              방문하기
+            </a>
+          </div>
+        </article>
+
+        <article class="card card-empty reveal">
+          <img src="assets/posil-sprout.png" alt="싹난 포실이" class="empty-posil" />
+          <p class="empty-msg">무럭무럭 자라는 중!</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <div class="contact-wrap reveal">
+        <div class="contact-posil">
+          <img src="assets/posil.png" alt="포실이" />
+        </div>
+        <div class="contact-body">
+          <h2 class="contact-title">포실이에게 연락하기 🥔</h2>
+          <p class="contact-desc">
+            피드백, 협업 제안, 아니면 그냥 안녕이라도 괜찮아요!
+          </p>
+          <div class="contact-btns">
+            <a href="mailto:lekjkj@naver.com" class="btn-contact">
+              <span>✉️</span> lekjkj@naver.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <img src="assets/posil-icon.png" alt="" class="footer-posil" aria-hidden="true" />
+    <p class="footer-name">포실이 허브</p>
+    <p class="footer-copy">© 2026 포실이. 직접 만든 모든 것.</p>
+    <p class="footer-love">🧡 포실이가 직접 만들었어요</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
