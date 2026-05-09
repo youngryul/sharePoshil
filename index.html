@@ -18,8 +18,8 @@
         <span class="logo-text">포실이 허브</span>
       </div>
       <nav class="nav">
-        <a href="#apps">앱</a>
         <a href="#web">웹사이트</a>
+        <a href="#apps">앱</a>
         <a href="#contact">연락처</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
@@ -27,8 +27,8 @@
       </button>
     </div>
     <div class="mobile-nav" id="mobileNav">
-      <a href="#apps" onclick="closeNav()">앱</a>
       <a href="#web" onclick="closeNav()">웹사이트</a>
+      <a href="#apps" onclick="closeNav()">앱</a>
       <a href="#contact" onclick="closeNav()">연락처</a>
     </div>
   </header>
@@ -97,49 +97,8 @@
     </div>
   </section>
 
-  <!-- ===== APPS ===== -->
-  <section class="section" id="apps">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <span class="section-tag">📱 앱</span>
-        <h2 class="section-title">앱 다운로드</h2>
-        <p class="section-sub">포실이가 직접 개발한 모바일 · 데스크탑 앱</p>
-      </div>
-
-      <div class="cards-grid">
-        <!-- ▼ 앱 카드 추가 예시 — 복사해서 사용하세요 -->
-        <article class="card reveal">
-          <div class="card-thumb" style="--grad: linear-gradient(135deg,#8b6914,#c8933b)">
-            <img src="assets/posil-icon.png" alt="앱 아이콘" class="card-thumb-img" />
-          </div>
-          <div class="card-body">
-            <div class="card-top">
-              <h3 class="card-name">앱 이름</h3>
-              <span class="chip chip-soon">준비중</span>
-            </div>
-            <p class="card-desc">앱에 대한 짧은 소개를 여기에 적어주세요.</p>
-            <p class="card-version">출시 예정</p>
-          </div>
-          <div class="card-footer">
-            <span class="btn-dl btn-disabled">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-              </svg>
-              준비중
-            </span>
-          </div>
-        </article>
-
-        <article class="card card-empty reveal">
-          <img src="assets/posil.png" alt="포실이" class="empty-posil" />
-          <p class="empty-msg">곧 더 추가될 예정이에요!</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== WEB ===== -->
-  <section class="section section-alt" id="web">
+  <section class="section" id="web">
     <div class="section-inner">
       <div class="section-header reveal">
         <span class="section-tag">🌐 웹</span>
@@ -174,6 +133,47 @@
         <article class="card card-empty reveal">
           <img src="assets/posil-sprout.png" alt="싹난 포실이" class="empty-posil" />
           <p class="empty-msg">무럭무럭 자라는 중!</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPS ===== -->
+  <section class="section section-alt" id="apps">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">📱 앱</span>
+        <h2 class="section-title">앱 다운로드</h2>
+        <p class="section-sub">포실이가 직접 개발한 모바일 · 데스크탑 앱</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- ▼ 앱 카드 추가 예시 — 복사해서 사용하세요 -->
+        <article class="card reveal">
+          <div class="card-thumb" style="--grad: linear-gradient(135deg,#8b6914,#c8933b)">
+            <img src="assets/posil-icon.png" alt="앱 아이콘" class="card-thumb-img" />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-name">앱 이름</h3>
+              <span class="chip chip-soon">준비중</span>
+            </div>
+            <p class="card-desc">앱에 대한 짧은 소개를 여기에 적어주세요.</p>
+            <p class="card-version">출시 예정</p>
+          </div>
+          <div class="card-footer">
+            <span class="btn-dl btn-disabled">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+              </svg>
+              준비중
+            </span>
+          </div>
+        </article>
+
+        <article class="card card-empty reveal">
+          <img src="assets/posil.png" alt="포실이" class="empty-posil" />
+          <p class="empty-msg">곧 더 추가될 예정이에요!</p>
         </article>
       </div>
     </div>

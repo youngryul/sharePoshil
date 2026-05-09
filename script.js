@@ -54,15 +54,11 @@ function animateCount(el, target, suffix) {
 
 const statsSection = document.getElementById('stats');
 let counted = false;
-let visitCount = 0;
-
-// 방문자 수: CountAPI로 카운팅
-fetch('https://api.countapi.xyz/hit/posil-hub/visits')
-  .then(res => res.json())
-  .then(data => { visitCount = data.value; })
-  .catch(() => { visitCount = 0; });
+let visitCount = null;
+let statsVisible = false;
 
 function runCounters() {
+  if (visitCount === null || !statsVisible) return;
   Object.entries(COUNTS).forEach(([id, val]) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -72,9 +68,22 @@ function runCounters() {
   if (userEl) animateCount(userEl, visitCount, '+');
 }
 
+// 방문자 수: CountAPI로 카운팅
+fetch('https://api.counterapi.dev/v1/posil-hub/visits/up')
+  .then(res => res.json())
+  .then(data => {
+    visitCount = data.count;
+    runCounters();
+  })
+  .catch(() => {
+    visitCount = 0;
+    runCounters();
+  });
+
 const statsObserver = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting && !counted) {
     counted = true;
+    statsVisible = true;
     runCounters();
   }
 }, { threshold: 0.4 });
