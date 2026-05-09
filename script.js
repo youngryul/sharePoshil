@@ -37,8 +37,7 @@ revealEls.forEach(el => revealObserver.observe(el));
 // ▼ 실제 수치로 변경하세요
 const COUNTS = {
   'stat-apps':  0,   // 앱 개수
-  'stat-web':   0,   // 웹 개수
-  'stat-users': 0,   // 총 다운로드 수
+  'stat-web':   1,   // 웹 개수
 };
 
 function animateCount(el, target, suffix) {
@@ -55,15 +54,28 @@ function animateCount(el, target, suffix) {
 
 const statsSection = document.getElementById('stats');
 let counted = false;
+let visitCount = 0;
+
+// 방문자 수: CountAPI로 카운팅
+fetch('https://api.countapi.xyz/hit/posil-hub/visits')
+  .then(res => res.json())
+  .then(data => { visitCount = data.value; })
+  .catch(() => { visitCount = 0; });
+
+function runCounters() {
+  Object.entries(COUNTS).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    animateCount(el, val, '개');
+  });
+  const userEl = document.getElementById('stat-users');
+  if (userEl) animateCount(userEl, visitCount, '+');
+}
 
 const statsObserver = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting && !counted) {
     counted = true;
-    Object.entries(COUNTS).forEach(([id, val]) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      animateCount(el, val, id === 'stat-users' ? '+' : '개');
-    });
+    runCounters();
   }
 }, { threshold: 0.4 });
 
