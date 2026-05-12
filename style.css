@@ -548,6 +548,70 @@ img { display: block; max-width: 100%; }
 }
 
 /* ===========================
+   WALLPAPERS
+=========================== */
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.wp-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.wp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.wp-preview {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--cream-alt);
+}
+
+.wp-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.wp-card:hover .wp-img {
+  transform: scale(1.04);
+}
+
+.wp-info {
+  padding: 16px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wp-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.wp-info .btn-dl {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+  .wallpaper-grid { grid-template-columns: 1fr; }
+}
+
+/* ===========================
    CONTACT
 =========================== */
 .contact-wrap {

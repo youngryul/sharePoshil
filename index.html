@@ -20,6 +20,7 @@
       <nav class="nav">
         <a href="#web">웹사이트</a>
         <a href="#apps">앱</a>
+        <a href="#wallpapers">배경화면</a>
         <a href="#contact">연락처</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
@@ -29,6 +30,7 @@
     <div class="mobile-nav" id="mobileNav">
       <a href="#web" onclick="closeNav()">웹사이트</a>
       <a href="#apps" onclick="closeNav()">앱</a>
+      <a href="#wallpapers" onclick="closeNav()">배경화면</a>
       <a href="#contact" onclick="closeNav()">연락처</a>
     </div>
   </header>
@@ -175,6 +177,51 @@
           <img src="assets/posil.png" alt="포실이" class="empty-posil" />
           <p class="empty-msg">곧 더 추가될 예정이에요!</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WALLPAPERS ===== -->
+  <section class="section" id="wallpapers">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">🖼️ 배경화면</span>
+        <h2 class="section-title">배경화면 다운로드</h2>
+        <p class="section-sub">포실이 테마 배경화면을 무료로 받아가세요</p>
+      </div>
+
+      <div class="wallpaper-grid">
+
+        <div class="wp-card reveal">
+          <div class="wp-preview">
+            <img src="assets/wallpaper-farm.png" alt="감자 텃밭 배경화면" class="wp-img" />
+          </div>
+          <div class="wp-info">
+            <span class="wp-title">감자 텃밭</span>
+            <a href="assets/wallpaper-farm.png" download="포실이_감자텃밭_배경화면.png" class="btn-dl">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4h14v-2H5v2z"/>
+              </svg>
+              다운로드
+            </a>
+          </div>
+        </div>
+
+        <div class="wp-card reveal">
+          <div class="wp-preview">
+            <img src="assets/wallpaper-simple.png" alt="심플 배경화면" class="wp-img" />
+          </div>
+          <div class="wp-info">
+            <span class="wp-title">심플 포실이</span>
+            <a href="assets/wallpaper-simple.png" download="포실이_심플_배경화면.png" class="btn-dl">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4h14v-2H5v2z"/>
+              </svg>
+              다운로드
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
